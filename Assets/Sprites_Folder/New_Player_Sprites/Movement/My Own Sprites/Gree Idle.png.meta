@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 044e035c00a75a24cae510adb1a5e09d
+guid: dd79927089806e248a27c409ebd9d5dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 23
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,10 +152,10 @@ TextureImporter:
       name: Gree Idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 13
         y: 3
-        width: 48
-        height: 61
+        width: 22
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84530d89de3a2dc4bae1666aeaeb2b63
-      internalID: 1161305356
+      spriteID: 817c8d65c00cccd4e93a7ecd8d8d0d92
+      internalID: 1359276074
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: Gree Idle_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 61
         y: 3
-        width: 48
-        height: 61
+        width: 22
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30229000dfe475240a7dc226efad6124
-      internalID: 439554932
+      spriteID: f661a20657b7d6342970bed73c1e64e3
+      internalID: -1129767777
       vertices: []
       indices: 
       edges: []
@@ -194,10 +194,10 @@ TextureImporter:
       name: Gree Idle_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 109
         y: 3
-        width: 48
-        height: 61
+        width: 22
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11dde891b079cf346959b4f537cd2a67
-      internalID: 91254363
+      spriteID: 6581db00f6a932b4fa86e1292041466b
+      internalID: 1457078568
       vertices: []
       indices: 
       edges: []
@@ -215,10 +215,10 @@ TextureImporter:
       name: Gree Idle_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 157
         y: 3
-        width: 48
-        height: 61
+        width: 22
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e7434186093d4a4aac328e03db2bcce
-      internalID: -2109090029
+      spriteID: fe1993df85695ae43be673fb5ea3b863
+      internalID: 1062328313
       vertices: []
       indices: 
       edges: []
@@ -236,10 +236,10 @@ TextureImporter:
       name: Gree Idle_4
       rect:
         serializedVersion: 2
-        x: 192
+        x: 204
         y: 3
-        width: 48
-        height: 61
+        width: 23
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b0b9181b9966264ca9a758cbadd0766
-      internalID: -1123800281
+      spriteID: c1a35e231eb495e45be667aa1400c481
+      internalID: -1441822419
       vertices: []
       indices: 
       edges: []
@@ -257,10 +257,10 @@ TextureImporter:
       name: Gree Idle_5
       rect:
         serializedVersion: 2
-        x: 240
+        x: 251
         y: 3
-        width: 48
-        height: 61
+        width: 25
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20120b8ec9170d44eac9ee37cc63df75
-      internalID: 89629228
+      spriteID: 3eb26565a041dda499a2b876f8740a98
+      internalID: -1914908033
       vertices: []
       indices: 
       edges: []
@@ -278,10 +278,10 @@ TextureImporter:
       name: Gree Idle_6
       rect:
         serializedVersion: 2
-        x: 288
+        x: 300
         y: 3
-        width: 48
-        height: 61
+        width: 24
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df379bdff346c734f9c1a762762f850e
-      internalID: 947776794
+      spriteID: 68c89407e2f066f48a6cb5e73040edc6
+      internalID: -1440493781
       vertices: []
       indices: 
       edges: []
@@ -299,10 +299,10 @@ TextureImporter:
       name: Gree Idle_7
       rect:
         serializedVersion: 2
-        x: 336
+        x: 349
         y: 3
-        width: 48
-        height: 61
+        width: 23
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,8 +310,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56eb0b0b5a7e3b24f9ab962bf6cef3f8
-      internalID: -1933791680
+      spriteID: 212b485e8ef5bc241a9ff5d8e538031b
+      internalID: -1987248479
       vertices: []
       indices: 
       edges: []
@@ -320,10 +320,10 @@ TextureImporter:
       name: Gree Idle_8
       rect:
         serializedVersion: 2
-        x: 384
+        x: 397
         y: 3
-        width: 48
-        height: 61
+        width: 24
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,8 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16e1d43e1cd62fc4cb0fbc73d9dc77c6
-      internalID: -438892899
+      spriteID: f4911d736338d5a4faee651154d0f4fe
+      internalID: -487916093
       vertices: []
       indices: 
       edges: []
@@ -348,15 +348,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Gree Idle_0: 1161305356
-      Gree Idle_1: 439554932
-      Gree Idle_2: 91254363
-      Gree Idle_3: -2109090029
-      Gree Idle_4: -1123800281
-      Gree Idle_5: 89629228
-      Gree Idle_6: 947776794
-      Gree Idle_7: -1933791680
-      Gree Idle_8: -438892899
+      Gree Idle_0: 1359276074
+      Gree Idle_1: -1129767777
+      Gree Idle_2: 1457078568
+      Gree Idle_3: 1062328313
+      Gree Idle_4: -1441822419
+      Gree Idle_5: -1914908033
+      Gree Idle_6: -1440493781
+      Gree Idle_7: -1987248479
+      Gree Idle_8: -487916093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

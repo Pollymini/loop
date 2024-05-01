@@ -7,7 +7,9 @@ public class LevelGeneration : MonoBehaviour
     public Transform[] startingPos;
     public GameObject[] rooms; // 0 - LR, 1- LRD, 2 - LRT, 3 - LRTD
 
+    public GameObject kostyaTest;
     public GameObject Player;
+ 
     public Transform pSpawn;
 
     private int direction;
@@ -32,6 +34,7 @@ public class LevelGeneration : MonoBehaviour
         transform.position = startingPos[randStartPos].position;
         Instantiate(rooms[0], transform.position, Quaternion.identity);
         Instantiate(Player, pSpawn.transform.position ,Quaternion.identity);
+        Instantiate(kostyaTest, pSpawn.transform.position, Quaternion.identity);
         direction = Random.Range(1, 6);
     }
     private void Update()
