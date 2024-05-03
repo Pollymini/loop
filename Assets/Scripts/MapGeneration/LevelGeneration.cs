@@ -11,6 +11,7 @@ public class LevelGeneration : MonoBehaviour
     public GameObject Player;
  
     public Transform pSpawn;
+    
 
     private int direction;
     public float moveAmmount;
@@ -108,10 +109,7 @@ public class LevelGeneration : MonoBehaviour
             {
 
                 Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, rad, room);
-                if (roomDetection != null)
-                {
-                    Debug.Log("room number " + roomDetection.gameObject.name);
-                }
+                
                 if (roomDetection.GetComponent<RoomType>().type !=1 && roomDetection.GetComponent<RoomType>().type != 3)
                 {
                     if(downCounter >= 2)

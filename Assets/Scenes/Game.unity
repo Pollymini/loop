@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Intensity: 0.4
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 0000000099603a86655563fdcf834cca17551686598e4d65
+  m_ApplyToSortingLayers: 0000000099603a86655563fdcf834cca17551686598e4d654363246cef519b60
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -568,7 +568,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 264
+    m_Bits: 776
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: add14a77aa8009843906dff1bcd72d28, type: 2}
   m_TargetDisplay: 0
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   - {fileID: 4362537338117995083, guid: eb7b1d665e39b4645a5b99ee8fbe2e5b, type: 3}
   - {fileID: 7952952919900721335, guid: e14ddd0104b46e64bb667926b51bf736, type: 3}
   - {fileID: 1494264945743502855, guid: f553ceee2c14ee746b5c19be8aad9011, type: 3}
-  kostyaTest: {fileID: 5011754968425427477, guid: 438916c78ce783841b89670277a54dbe, type: 3}
+  kostyaTest: {fileID: 3507089740883777703, guid: e54c458107537c7478b42597d62e6b88, type: 3}
   Player: {fileID: 8153937155967768063, guid: f25e987f83b05dc458c473d47a3b1c3b, type: 3}
   pSpawn: {fileID: 858917013}
   moveAmmount: 20

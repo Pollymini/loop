@@ -50,11 +50,16 @@ public class AggressiveWeapon : Weapon
     public void AddToDetected(Collider2D collision)
     {
 
-        IDamagable damagable = collision.GetComponent<IDamagable>();
-        if (damagable != null)
+
+        
+        IDamagable damageable = collision.GetComponent<IDamagable>();
+        
+        if (damageable != null)
         {
             
-            detectedIDamagables.Add(damagable);
+            detectedIDamagables.Add(damageable);
+           
+            Debug.Log("Damage in Weapon 2");
         }
 
         IKnockbackable knockbackable = collision.GetComponent<IKnockbackable>();
@@ -69,7 +74,7 @@ public class AggressiveWeapon : Weapon
 
     public void RemoveFromDetected(Collider2D collision)
     {
-       
+        
         IDamagable damagable = collision.GetComponent<IDamagable>();
         if (damagable != null)
         {

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9195899260307026078}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6072885810210063047}
   - component: {fileID: 4922384312848960749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2854929344776281352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LedgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 7448563302478049926}
   - component: {fileID: 2340459937903786805}
   - component: {fileID: 3950087845851842151}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6695111745294011196}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrounCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7502372676116280285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerAfterImagePool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +608,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 255
+    m_Bits: 511
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -718,6 +718,7 @@ GameObject:
   - component: {fileID: 7180425061393576263}
   - component: {fileID: 6048358504055217422}
   - component: {fileID: 8883316748513301196}
+  - component: {fileID: 7668046174682027966}
   - component: {fileID: 1478225117437157163}
   - component: {fileID: 7721655259508949446}
   - component: {fileID: 2965612519101282958}
@@ -938,6 +939,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 0a94b51fc951736499bfff0b8ba8dc54, type: 2}
+--- !u!114 &7668046174682027966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710360107966273653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da474e47c5d205945a2b8d382c220ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  afterImagePrefab: {fileID: 6691362684429395575, guid: 07ee6b1db4db18846b3f8f85a8f82ed4, type: 3}
 --- !u!212 &1478225117437157163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1151,7 +1165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4710360107966273653}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
@@ -1174,7 +1188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4075705281625791616}
   - component: {fileID: 4244367789199954897}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CollisionSenses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1234,7 +1248,7 @@ GameObject:
   - component: {fileID: 8047517939963025023}
   - component: {fileID: 4247121967802400135}
   - component: {fileID: 1940180807155284003}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1395,7 +1409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 884464729001911205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171428542850121364}
   - component: {fileID: 4337469584657536507}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Sword1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1564,7 +1578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2358093317376299804}
   - component: {fileID: 33493943125595059}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1606,7 +1620,7 @@ MonoBehaviour:
   m_Intensity: 2.2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 0000000099603a86655563fdcf834cca17551686598e4d65
+  m_ApplyToSortingLayers: 0000000099603a86655563fdcf834cca17551686598e4d654363246c
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1679,8 +1693,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5381785850582756883}
   - component: {fileID: 8238229548885517128}
-  m_Layer: 8
-  m_Name: Capsule
+  m_Layer: 9
+  m_Name: MiniMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1762,7 +1776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462711864700698591}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1795,7 +1809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4099269682813041682}
   - component: {fileID: 4742938264182846618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}

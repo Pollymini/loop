@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Weapon
   - Base
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - Ground
   - Water
   - UI
+  - Player
   - Damagable
   - Weapon
   - MiniMap
-  - 
   - 
   - 
   - 
@@ -46,15 +47,21 @@ TagManager:
   - name: BackGround
     uniqueID: 2251972761
     locked: 0
-  - name: Platforms
-    uniqueID: 4251145573
-    locked: 0
   - name: Decoration
     uniqueID: 3394012111
+    locked: 0
+  - name: Foreground_Deco
+    uniqueID: 1699581529
     locked: 0
   - name: Player
     uniqueID: 2249610519
     locked: 0
-  - name: Foreground_Deco
-    uniqueID: 1699581529
+  - name: Damagable
+    uniqueID: 1620791791
+    locked: 0
+  - name: Enemy
+    uniqueID: 1814324035
+    locked: 0
+  - name: Platforms
+    uniqueID: 4251145573
     locked: 0

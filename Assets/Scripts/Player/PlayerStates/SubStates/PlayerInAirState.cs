@@ -171,7 +171,10 @@ public class PlayerInAirState : PlayerState
 
     private void CheckWallJumpCoyoteTime()
     {
-        if (wallJumpCoyoteTime && Time.time > startWallJumpCoyoteTime + playerData.coyoteTime);
+        if (wallJumpCoyoteTime && Time.time > startWallJumpCoyoteTime + playerData.coyoteTime)
+        {
+            StoptWallJumpCoyoteTime();
+        }
     }
 
     public void StartCoyoteTime() => coyoteTime = true;
