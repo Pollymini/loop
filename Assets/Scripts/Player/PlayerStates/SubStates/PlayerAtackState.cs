@@ -16,8 +16,8 @@ public class PlayerAttackState : PlayerAbilityState
 
     private bool setVelocity;
 
-    
 
+    private bool shouldCheckFlip;
 
 
     public PlayerAttackState(Player player, PlayerStateMashine stateMashine, PlayerData playerData, string animBoolName) : base(player, stateMashine, playerData, animBoolName)
@@ -50,9 +50,12 @@ public class PlayerAttackState : PlayerAbilityState
         base.LogicUpdate();
         xInput = player.InputHandler.NormInputX;
         dashInput = player.InputHandler.DashInput;
+        if (shouldCheckFlip)
+        {
+            core.Movement.CheckIfShouldFlip(xInput);
 
-        core.Movement.CheckIfShouldFlip(xInput);
-         if (dashInput)
+        }
+        if (dashInput)
         {
 
             stateMashine.ChangeState(player.DashState);
@@ -92,7 +95,10 @@ public class PlayerAttackState : PlayerAbilityState
         this.weapon = weapon;
         this.weapon.InitializeWeapon(this, core);
     }
-
+    public void SetFlipCheck(bool value)
+    {
+        shouldCheckFlip = value;
+    }
     public void SetPlayerVelocity(float velocity)
     {
        core.Movement.SetVelocityX(velocity * core.Movement.FacingDirection);

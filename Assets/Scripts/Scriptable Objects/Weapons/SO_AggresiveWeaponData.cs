@@ -24,5 +24,6 @@ public class SO_AggresiveWeaponData : SO_WeaponData
         {
             movementSpeed[i] = attactDetails[i].movementSpeed;
         }
+        
     }
 }

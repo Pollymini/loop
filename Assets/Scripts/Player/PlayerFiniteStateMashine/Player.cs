@@ -14,7 +14,7 @@ using Unity.Collections.LowLevel.Unsafe;
 
 using UnityEngine.UIElements;
 
-public class Player : MonoBehaviour, IDamagable, IKnockbackable 
+public class Player : MonoBehaviour
 
     
 {
@@ -121,15 +121,15 @@ public class Player : MonoBehaviour, IDamagable, IKnockbackable
         DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         MovementCollider = GetComponent<BoxCollider2D>();
 
-        StateMashine.Initialize(IdleState);
        
-
-
         Inventory = GetComponent<PlayerInventory>();
 
 
         PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
-        // SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+       // SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+
+
+        StateMashine.Initialize(IdleState);
     }
     private void Update()
     {
@@ -137,19 +137,12 @@ public class Player : MonoBehaviour, IDamagable, IKnockbackable
         Core.LogicUpdate();
         StateMashine.CurrentState.LogicUpdate();
     }
-    public void Knockback(Vector2 angle, float strength, int direction)
-    {
-        Core.Movement.SetVelocity(strength, angle, direction);
-    }
-    public void Damage(float ammount)
-    {
-        Debug.Log(ammount + "damage");
-    }
     private void FixedUpdate()
     {
         StateMashine.CurrentState.PhysicsUpdate();
 
     }
+   
     public void SetColliderHeight(float height)
     {
         Vector2 center = MovementCollider.offset;
@@ -160,10 +153,7 @@ public class Player : MonoBehaviour, IDamagable, IKnockbackable
         MovementCollider.size = workspace;
         MovementCollider.offset = center;
     }
-    public Vector2 GetVelocity()
-    {
-        return RB.velocity;
-    }
+   
 
 
 

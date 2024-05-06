@@ -8,6 +8,8 @@ public class State
 
     protected Entity entity;
 
+    protected Core core;
+
     protected float startTime;
 
     protected string animBoolName;
@@ -17,6 +19,7 @@ public class State
         this.entity = entity;
         this.stateMachine = stateMashine;
         this.animBoolName = animBoolName;
+        core = entity.Core;
     }
 
     public virtual void Enter()

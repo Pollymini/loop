@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : Entity
+public class Enemy1 : Entity, IDamagable
 {
 
     public Rigidbody2D rb;
@@ -35,9 +35,9 @@ public class Enemy1 : Entity
 
     [SerializeField]
     private Transform meleAttackPosition;
-    public override void Start()
+    public override void Awake()
     {
-        base.Start();
+        base.Awake();
 
         moveState = new E1_MoveState(this, stateMashine, "move", moveStateData, this);
         idleState = new E1_IdleState(this, stateMashine, "idle", idleStateData, this);
@@ -47,14 +47,20 @@ public class Enemy1 : Entity
         meleAttackState = new E1_MeleAttackState(this, stateMashine,"meleAttack", meleAttackPosition, meleAttacStateData, this);
         stunState = new E1_StunState(this, stateMashine, "stun", stunStateData, this);  
         deadState = new E1_DeadState(this, stateMashine,"dead", deadStateData, this);
+        
+        
+    }
+    private void Start()
+    {
         stateMashine.Initialize(moveState);
-
-        rb = GetComponentInChildren<Rigidbody2D>();
     }
 
-    public override void Damage(AttackDetails attackDetails)
+        
+
+    
+
+    void IDamagable.Damage(float ammount)
     {
-        base.Damage(attackDetails);
         if (isDead)
         {
             stateMashine.ChangeState(deadState);
@@ -63,6 +69,5 @@ public class Enemy1 : Entity
         {
             stateMashine.ChangeState(stunState);
         }
-        
     }
 }

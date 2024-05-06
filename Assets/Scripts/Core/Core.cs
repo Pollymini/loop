@@ -7,7 +7,7 @@ public class Core : MonoBehaviour
     public Movement Movement { get; private set; }
     public CollisionSenses CollisionSenses { get; private set; }
 
-    private Combat Combat;
+    public Combat Combat { get; private set; }
 
     private void Awake()
     {

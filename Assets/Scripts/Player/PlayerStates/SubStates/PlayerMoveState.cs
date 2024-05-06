@@ -30,7 +30,7 @@ public class PlayerMoveState : PlayerGroundedState
         crouchInput = player.InputHandler.CrouchInput;
 
        
-        player.GetVelocity();
+       
         
       
 

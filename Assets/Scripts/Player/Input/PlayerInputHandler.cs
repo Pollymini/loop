@@ -64,7 +64,7 @@ using UnityEngine.InputSystem.Utilities;
         if (context.started)
        {
             AttackInputs[(int)CombatInputs.primary] = true;
-
+            
            
         }
         if (context.canceled)

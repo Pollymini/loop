@@ -58,8 +58,8 @@ public class AggressiveWeapon : Weapon
         {
             
             detectedIDamagables.Add(damageable);
-           
-            Debug.Log("Damage in Weapon 2");
+
+            
         }
 
         IKnockbackable knockbackable = collision.GetComponent<IKnockbackable>();

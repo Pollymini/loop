@@ -41,7 +41,6 @@ public class Weapon : MonoBehaviour
     protected virtual void Awake()
    
     {
-       gameObject.SetActive(false);
 
       
 
@@ -53,9 +52,10 @@ public class Weapon : MonoBehaviour
        weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
 
         
+        core = GetComponent<Core>();
 
         
-        core = GetComponent<Core>();
+       gameObject.SetActive(false);
     }
     #endregion
 
@@ -69,7 +69,7 @@ public class Weapon : MonoBehaviour
             attackCounter = 0;
 
         }
-            
+
         
 
        

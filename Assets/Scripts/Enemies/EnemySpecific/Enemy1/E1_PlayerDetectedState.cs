@@ -36,10 +36,7 @@ public class E1_PlayerDetectedState : PlayerDetectedState
         {
             stateMachine.ChangeState(enemy.lookForPlayerState);
         }
-        else if(isDetectingLedge)
-        {
-            stateMachine.ChangeState(enemy.moveState);
-        }
+       
 
 
     }

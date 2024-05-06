@@ -22,7 +22,7 @@ public class PlayerDetectedState : State
 
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
-        isDetectingLedge = entity.CheckLedge();
+        isDetectingLedge = core.CollisionSenses.LedgeVertical;
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
 
@@ -30,7 +30,7 @@ public class PlayerDetectedState : State
     {
         base.Enter();
         performLongRangeAction = false;
-        entity.SetVelocity(0f);
+        core.Movement.SetVelocityX(0f);
     }
 
         
@@ -43,6 +43,7 @@ public class PlayerDetectedState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        core.Movement.SetVelocityX(0f);
         if (Time.time >= startTime + stateData.longRangeActionTime)
         {
             performLongRangeAction = true;

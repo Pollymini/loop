@@ -43,12 +43,12 @@ public class E1_ChargeState : ChargeState
                 stateMachine.ChangeState(enemy.lookForPlayerState);
             }
         }
+    }
 
 
         
             
         
-    }
 
     public override void PhysicsUpdate()
     {

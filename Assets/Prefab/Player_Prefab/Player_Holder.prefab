@@ -1228,7 +1228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 6695111745294011196}
   wallCheck: {fileID: 9195899260307026078}
-  ledgeCheck: {fileID: 2854929344776281352}
+  ledgeCheckHorizontal: {fileID: 2854929344776281352}
+  ledgeCheckVertical: {fileID: 0}
   ceilingCheck: {fileID: 884464729001911205}
   groundCheckRadius: 0.31
   wallCheckDistance: 0.5

@@ -25,7 +25,8 @@ public class AttackState : State
         base.Enter();
         entity.atsm.attackState = this;
         isAnimationFinished = false;
-        entity.SetVelocity(0f);
+        
+        core.Movement.SetVelocityX(0f);
     }
 
     public override void Exit()
@@ -36,6 +37,8 @@ public class AttackState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        core.Movement.SetVelocityX(0f);
     }
 
     public override void PhysicsUpdate()

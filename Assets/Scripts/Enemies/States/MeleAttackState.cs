@@ -6,7 +6,7 @@ public class MeleAttackState : AttackState
 {
     protected D_MeleAttacState stateData;
 
-    protected AttackDetails attackDetails;
+    
 
     public MeleAttackState(Entity entity, FiniteStateMashine stateMashine, string animBoolName, Transform attackPosition, D_MeleAttacState stateData) : base(entity, stateMashine, animBoolName, attackPosition)
     {
@@ -21,7 +21,8 @@ public class MeleAttackState : AttackState
     public override void Enter()
     {
         base.Enter();
-        attackDetails.damageAmmount = stateData.attackDamage;
+       // attackDetails.damageAmmount = stateData.attackDamage;
+        core.Movement.SetVelocityX(0f);
     }
 
     public override void Exit()
@@ -37,6 +38,7 @@ public class MeleAttackState : AttackState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        core.Movement.SetVelocityX(0f);
     }
 
     public override void PhysicsUpdate()
@@ -52,9 +54,12 @@ public class MeleAttackState : AttackState
 
         foreach (Collider2D collider in detectedObjects)
         {
-            //collider.transform.SendMessage("Damage", attackDetails);
-
-            Debug.Log("Player Hit");
+            IDamagable damagable = collider.gameObject.GetComponent<IDamagable>();
+            if (damagable != null)
+            {
+                //damagable.Damage(attackDetails);
+                
+            }
         }
     }
 }
