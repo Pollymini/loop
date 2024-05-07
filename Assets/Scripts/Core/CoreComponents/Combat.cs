@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Combat : CoreComponent, IDamagable, IKnockbackable
 {
-    private bool isKnockbackActive;
+    public bool isKnockbackActive;
     private float knockbackStartTime;
-
-
-    public void LogicUpdate()
+    [SerializeField]
+    private float knockBackMaxTime;
+    public  void LogicUpdate()
     {
         CheckKnockback();
-
-        
     }
 
-    public void Damage(float ammount)
+    public void Damage(float amount)
     {
-        Debug.Log(core.transform.parent.name + " damaged for " + ammount);
+        Debug.Log(core.transform.parent.name + " Damaged!" + core.transform.parent.name);
+
+        core.stats.DecreaseHealth(amount);
     }
 
     public void Knockback(Vector2 angle, float strength, int direction)
@@ -26,14 +26,11 @@ public class Combat : CoreComponent, IDamagable, IKnockbackable
         core.Movement.CanSetVelocity = false;
         isKnockbackActive = true;
         knockbackStartTime = Time.time;
-
-        
     }
-    
 
-    private void CheckKnockback() 
+    private void CheckKnockback()
     {
-        if (isKnockbackActive && core.Movement.CurrentVelocity.y <= 0.01f && core.CollisionSenses.Ground) 
+        if (isKnockbackActive && core.Movement.CurrentVelocity.y <= 0.01f && (core.CollisionSenses.Ground || Time.time >= knockbackStartTime + knockBackMaxTime))
         {
             isKnockbackActive = false;
             core.Movement.CanSetVelocity = true;

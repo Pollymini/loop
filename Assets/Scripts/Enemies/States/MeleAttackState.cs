@@ -7,7 +7,7 @@ public class MeleAttackState : AttackState
     protected D_MeleAttacState stateData;
 
     
-
+   
     public MeleAttackState(Entity entity, FiniteStateMashine stateMashine, string animBoolName, Transform attackPosition, D_MeleAttacState stateData) : base(entity, stateMashine, animBoolName, attackPosition)
     {
         this.stateData = stateData;
@@ -21,8 +21,8 @@ public class MeleAttackState : AttackState
     public override void Enter()
     {
         base.Enter();
-       // attackDetails.damageAmmount = stateData.attackDamage;
-        core.Movement.SetVelocityX(0f);
+       
+        
     }
 
     public override void Exit()
@@ -57,8 +57,14 @@ public class MeleAttackState : AttackState
             IDamagable damagable = collider.gameObject.GetComponent<IDamagable>();
             if (damagable != null)
             {
-                //damagable.Damage(attackDetails);
+                damagable.Damage(stateData.attackDamage);
                 
+            }
+
+            IKnockbackable knockbackable = collider.GetComponent<IKnockbackable>();
+            if(knockbackable != null)
+            {
+                knockbackable.Knockback(stateData.knockbackAngle, stateData.knockBackStrength, core.Movement.FacingDirection);
             }
         }
     }

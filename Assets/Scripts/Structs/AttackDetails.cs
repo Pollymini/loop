@@ -1,13 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public struct AttackDetails
-{
-    public Vector2 position;
-    public float damageAmmount;
 
-    public float stunDamageAmount; 
-}
 
 
 
@@ -21,8 +15,8 @@ public struct WeaponAttactDetails
 
     public float knockbackStrength;
     public Vector2 knockbackAngle;
+}
 
  
-}
 
 

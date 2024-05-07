@@ -9,8 +9,8 @@ public class Entity : MonoBehaviour
     public D_Entity entityData;
 
    
-    public Animator anim { get; private set; }
     
+    public Animator anim { get; private set; }
     public AnimationToStateMahine atsm { get; private set; }
     public Core Core { get; private set; }
 
@@ -99,7 +99,7 @@ public class Entity : MonoBehaviour
         isStunned = false;
         currentStunResistence = entityData.stunResistance;
     }
-    public virtual void Damage(float ammount )
+    public virtual void Damage(float ammount)
     {
         lastDamageTime = Time.time;
 

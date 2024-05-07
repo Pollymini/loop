@@ -39,24 +39,24 @@ public class Weapon : MonoBehaviour
 
 
     protected virtual void Awake()
-   
     {
+       core = GetComponent<Core>();
+
+       baseAnimator = transform.Find("Base").GetComponent<Animator>();
+       weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
+
+       gameObject.SetActive(false);
+
+    }
+        
+
+        
+   
 
       
 
 
 
-
-       baseAnimator = transform.Find("Base").GetComponent<Animator>();
-
-       weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
-
-        
-        core = GetComponent<Core>();
-
-        
-       gameObject.SetActive(false);
-    }
     #endregion
 
 
@@ -116,10 +116,7 @@ public class Weapon : MonoBehaviour
          state.SetPlayerVelocity(0f);
      }
 
-    public virtual void AnimationActionTrigger()
-    {
-
-    }
+    public virtual void AnimationActionTrigger() { }
 
     #endregion
 

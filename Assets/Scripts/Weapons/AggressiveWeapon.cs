@@ -49,19 +49,13 @@ public class AggressiveWeapon : Weapon
 
     public void AddToDetected(Collider2D collision)
     {
-
-
-        
         IDamagable damageable = collision.GetComponent<IDamagable>();
         
         if (damageable != null)
         {
-            
             detectedIDamagables.Add(damageable);
-
             
         }
-
         IKnockbackable knockbackable = collision.GetComponent<IKnockbackable>();
         if (knockbackable != null)
         {
@@ -69,6 +63,12 @@ public class AggressiveWeapon : Weapon
             detectedIKnobackables.Add(knockbackable);
         }
     }
+
+            
+
+
+        
+
 
    
 

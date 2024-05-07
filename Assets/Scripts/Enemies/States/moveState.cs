@@ -18,34 +18,26 @@ public class moveState : State
     public override void DoChecks()
     {
         base.DoChecks();
-        if(core.Movement != null)
-        {
+        
           isDetectingLedge = core.CollisionSenses.LedgeVertical;
             isDetectingWall = core.CollisionSenses.WallFront;
             isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
 
-        }
-        else
-        {
-            Debug.Log("Collisions senses is null");
-        }
+        
 
     }
 
     public override void Enter()
     {
         base.Enter();
-        if(core.Movement != null)
-        {
-            core.Movement.SetVelocityX(stateData.movementSpeed * core.Movement.FacingDirection);
-
-        }
-        else
-        {
-            Debug.Log("No Core");
-        }
-
+        core.Movement.SetVelocityX(stateData.movementSpeed * core.Movement.FacingDirection);
     }
+        
+        
+
+        
+        
+
        
 
     public override void Exit()
@@ -63,7 +55,7 @@ public class moveState : State
     {
         base.PhysicsUpdate();
 
-       
+        core.Movement.SetVelocityX(stateData.movementSpeed * core.Movement.FacingDirection);
 
     }
         

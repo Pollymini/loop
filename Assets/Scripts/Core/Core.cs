@@ -6,15 +6,18 @@ public class Core : MonoBehaviour
 {
     public Movement Movement { get; private set; }
     public CollisionSenses CollisionSenses { get; private set; }
-
     public Combat Combat { get; private set; }
+    public Stats stats {  get; private set; }     
+
 
     private void Awake()
     {
         Movement = GetComponentInChildren<Movement>();
         CollisionSenses = GetComponentInChildren<CollisionSenses>();
         Combat = GetComponentInChildren<Combat>();
-       
+        stats = GetComponentInChildren<Stats>();    
+
+
     }
     public void LogicUpdate()
     {
@@ -22,5 +25,14 @@ public class Core : MonoBehaviour
 
         Combat.LogicUpdate();
     }
-
+    public void FixedUpdate()
+    {
+        Combat.LogicUpdate();
+        Movement.LogicUpdate();
+    }
 }
+       
+
+
+        
+

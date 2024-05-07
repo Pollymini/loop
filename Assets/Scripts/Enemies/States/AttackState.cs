@@ -38,7 +38,7 @@ public class AttackState : State
     {
         base.LogicUpdate();
 
-        core.Movement.SetVelocityX(0f);
+        
     }
 
     public override void PhysicsUpdate()
